@@ -1,0 +1,70 @@
+/*Grid*/
+main{
+    display: grid;
+    grid-template-areas:    "n a as"
+                            "f f f";
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+nav{
+    grid-area: n;
+}
+
+article{
+    grid-area: a;
+}
+
+aside{
+    grid-area: as;
+}
+
+footer{
+    grid-area: f;
+}
+/*Grid vége*/
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: rgba(0, 255, 255, 0.479);
+    height: 300px;
+}
+
+header img{
+    width: 100%;
+}
+
+#gombok{
+    position: relative;
+    left: 1525px;
+}
+
+nav img{
+    width: 150px;
+    border-radius: 350px;
+}
+
+nav li{
+    list-style-type: none;
+}
+
+nav a{
+    text-decoration: none;
+    color: blueviolet;
+}
+
+nav{
+    padding: 10px;
+    text-align: center;
+    background-color: antiquewhite;
+    margin-top: 0;
+    border-right: 1px dashed lightblue;
+    z-index: 10;
+}
+
+a, footer{
+    text-align: center;
+}
