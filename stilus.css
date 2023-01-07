@@ -1,9 +1,15 @@
 /*Grid*/
 main{
     display: grid;
-    grid-template-areas:    "n a as"
+    grid-template-areas:    "h h h"
+                            "n n n"
+                            "a a as"
                             "f f f";
     grid-template-columns: 1fr 2fr 1fr;
+}
+
+header{
+    grid-area: h;
 }
 
 nav{
@@ -26,25 +32,41 @@ footer{
 body{
     margin: 0;
     padding: 0;
+    background-color: rgb(127, 236, 146);
+    color: rgb(249, 0, 39);
+}
+
+main{
+    background-image: url(kepek/fejlec.jpeg), url(kepek/pink-rose-3998050__340.jpg);
+    background-position: top, bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 header{
-    background-color: rgba(0, 255, 255, 0.479);
-    height: 300px;
-}
-
-header img{
-    width: 100%;
-}
-
-#gombok{
-    position: relative;
-    left: 1525px;
+    height: 10%;
 }
 
 nav img{
     width: 150px;
+    height: 150px;
     border-radius: 350px;
+}
+
+#cvkep{
+    position: relative;
+    left: calc(60% - 250px);
+    text-align: center;
+    border-radius: 50%;
+    max-width: 250px;
+    background-color: rgb(58, 0, 9);
+}
+
+nav ul{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 nav li{
@@ -53,18 +75,71 @@ nav li{
 
 nav a{
     text-decoration: none;
-    color: blueviolet;
+    font-family: cursive;
+    font-size: large;
+    font-weight: bold;
+    color: rgb(0, 176, 91);
 }
 
 nav{
     padding: 10px;
-    text-align: center;
-    background-color: antiquewhite;
+    background-color: rgba(103, 0, 15, 0.378);
     margin-top: 0;
-    border-right: 1px dashed lightblue;
-    z-index: 10;
+}
+
+article, aside, footer{
+    background-color: rgba(0, 16, 1, 0.719);
+    padding: 15px;
 }
 
 a, footer{
     text-align: center;
+}
+
+/*Reszponzivitás*/
+
+@media screen and (width: 600px) {
+    *{
+        font-size: 4vw;
+    }
+
+    main{
+        grid-template-areas:    "h h"
+                                "n n"
+                                "a a"
+                                "as as"
+                                "f f";
+        grid-template-columns: 1fr;
+    }
+
+    nav li{
+        text-align: left;
+    }
+}
+
+@media screen and (width: 400px) {
+    *{
+        font-size: 6vw;
+    }
+    main{
+        grid-template-areas:    "h"
+                                "n"
+                                "a"
+                                "as"
+                                "f";
+        grid-template-columns: 1fr;
+    }
+
+    h1, h2{
+        text-align: center;
+    }
+
+    nav li{
+        text-align: left;
+    }
+
+    nav ul{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }
