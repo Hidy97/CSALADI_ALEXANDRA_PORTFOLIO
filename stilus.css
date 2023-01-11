@@ -152,7 +152,7 @@ p{
         font-size: 2vw;
     }
 
-    #kepek div{
+    #kepek{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
@@ -198,7 +198,7 @@ p{
         padding: 0;
     }
 
-    #kepek div{
+    #kepek{
         display: grid;
         grid-template-columns: 1fr;
     }
