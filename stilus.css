@@ -113,7 +113,7 @@ p{
 }
 
 /*Galéria*/
-#kepek div{
+#kepek{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
