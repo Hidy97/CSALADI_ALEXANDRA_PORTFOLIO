@@ -29,27 +29,29 @@ footer{
 }
 /*Grid vége*/
 
+*{
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
     padding: 0;
-    background-color: rgba(0, 16, 1, 0.719);
-    color: rgb(249, 0, 39);
+    /*color: rgb(249, 0, 39);*/
+    color: rgb(9, 219, 132);
 }
 
 main{
-    background-image: url(kepek/fejlec.jpeg), url(kepek/pink-rose-3998050__340.jpg);
-    background-position: top, bottom;
-    background-size: 100%;
-    background-repeat: no-repeat;
     width: 100%;
-    max-width: 1000px;
+    margin: auto;
 }
 
 header{
-    height: 10%;
+    background-image: url(kepek/fejlec.jpeg);
+    background-position: top, bottom;
+    background-size: cover;
 }
 
-nav img{
+header img{
     width: 150px;
     height: 150px;
     border-radius: 350px;
@@ -57,9 +59,9 @@ nav img{
 
 #cvkep{
     position: relative;
-    left: calc(60% - 250px);
+    left: calc(50% - 130px);
     text-align: center;
-    border-radius: 50%;
+    border-radius: 55%;
     width: 250px;
     margin: 0;
     padding: 0;
@@ -81,20 +83,21 @@ nav li{
 nav a{
     text-decoration: none;
     font-family: cursive;
-    font-size: large;
+    font-size: 26px;
     font-weight: bold;
     color: rgb(0, 176, 91);
+    text-align: center;
 }
 
 nav{
-    padding: 10px;
-    background-color: rgba(103, 0, 15, 0.378);
+    background-color: rgba(7, 202, 20, 0.178);
+    padding: 5px;
     margin-top: 0;
 }
 
 article, aside, footer{
-    background-color: rgba(0, 16, 1, 0.719);
     padding: 15px;
+    font-size: 18px;
 }
 
 a, footer{
@@ -111,8 +114,8 @@ p{
 
 /*Galéria*/
 #kepek div{
-    display: inline-block;
-    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 #kepek img{
@@ -121,7 +124,7 @@ p{
 }
 
 #kepek img:hover{
-    size: 50%;
+    resize: 50%;
 }
 
 /*Reszponzivitás*/
@@ -138,11 +141,28 @@ p{
                                 "as as"
                                 "f f";
         grid-template-columns: 1fr;
-        width: 100%;
+        width: auto;
     }
 
     nav li{
         text-align: left;
+    }
+
+    nav a{
+        font-size: 2vw;
+    }
+
+    #kepek div{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #kepek img{
+        width: 100%;
+    }
+
+    iframe{
+        width: auto;
     }
 }
 
@@ -163,6 +183,10 @@ p{
         text-align: center;
     }
 
+    nav a{
+        font-size: 6vw;
+    }
+
     nav li{
         text-align: left;
     }
@@ -170,5 +194,20 @@ p{
     nav ul{
         display: grid;
         grid-template-columns: 1fr;
+        margin: 0;
+        padding: 0;
+    }
+
+    #kepek div{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #kepek img{
+        width: 100%;
+    }
+
+    iframe{
+        width: auto;
     }
 }
