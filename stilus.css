@@ -42,32 +42,53 @@ body{
 
 /*Gombok*/
 /*Sötét téma*/
+.gombstilus{
+    margin: 2px;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(2, 59, 2, 0.123);
+}
+
 .dark-mode{
-    background-color: black;
-    color: white;
+    background-color: rgb(26, 24, 24);
+    color: rgb(150, 148, 126);
+}
+
+.dark-mode *{
+    font-family: "Audiowide", sans-serif;
 }
 
 .dark-mode header{
-    background-image: url(kepek/roses-1566792_960_720.jpg);
+    background-image: url(kepek/fejlec2.jpg);
     background-size: cover;
     color: white;
 }
 
 .dark-mode button{
-    background-color: rgb(2, 59, 2);
+    background-color: rgba(2, 59, 2, 0.123);
     color: rgba(252, 150, 218, 0.993);
 }
 
-.gombstilus{
-    margin: 2px;
-    position: relative;
-    left: calc(95% - 50px);
-    top: 5px;
-    font-size: 24px;
-    border: none;
-    border-radius: 50%;
+.dark-mode a{
+    color: rgb(150, 148, 126);
+    font-family: "Audiowide", sans-serif;
+}
+
+.dark-mode #cvkep{
+    background-color: rgba(71, 26, 33, 0.411);
+}
+
+.dark-mode nav{
+    margin-top: 0;
+    border-bottom: 3px dashed rgb(87, 1, 14);
+    border-radius: 25px;
 }
 /*Gombok vége*/
+*{
+    font-family: "Sofia", sans-serif;
+}
+
 main{
     width: 100%;
     margin: auto;
@@ -110,7 +131,7 @@ nav li{
 
 nav a{
     text-decoration: none;
-    font-family: cursive;
+    font-family: "Sofia", sans-serif;
     font-size: 26px;
     font-weight: bold;
     color: rgb(0, 176, 91);
